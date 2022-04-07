@@ -64,7 +64,7 @@ pub fn render_minimap(mtxm: &[u16], width: usize, height: usize, era: u16) -> Re
     let mut png = Vec::<u8>::new();
 
     {
-        let mut img: image::RgbImage = image::ImageBuffer::new(width as u32, width as u32);
+        let mut img: image::RgbImage = image::ImageBuffer::new(width as u32, height as u32);
         let tileset = era % 8;
         let tileset_map = TILESETS.get(&tileset).unwrap();
 
